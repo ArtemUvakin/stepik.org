@@ -4,5 +4,5 @@ def app(environ, start_response):
         ("Content-Type", "text/plain"),
         ("Content-Length", str(len(data)))
     ])
-    return iter([data])
+    return [bytes(data, 'utf-8')]
 
